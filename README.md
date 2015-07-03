@@ -8,8 +8,10 @@ Protocol
 --------
 Every time a new touch event is triggered, the software will send a new 1 byte packet formatted this way:
 
+```
 bit index:  1  2  3  4  5  6  7  8
 use:       [P][P][P][P][P][P][T][T]
+```
 
 The 6 most significant bits are used to store the address of the pin that generated the event. This means the protocol allows 64 available addresses; a single MPR121 allows you to attach only 12 electrodes, so there is plenty of room for adding more sensors and/or incorporating new features into the protocol.
 
@@ -28,6 +30,7 @@ Wiring
 ------
 Wiring the MPR121 to an Arduino is super simple:
 
+```
 MPR121		Arduino
 GND_____________GND		
 ADD_____________-
@@ -35,6 +38,7 @@ SDA_____________A4
 SCL_____________A5
 IRQ_____________D2
 3.3V____________3.3V
+```
 
 Licence
 -------
